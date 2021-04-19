@@ -27,8 +27,8 @@
         <div class="fixed top-0 left-0 flex justify-center w-full">
         <nav class="w-5/6 flex justify-between text-white bg-black bg-opacity-30 mt-1">
            <div class="p-3 text-4xl"><i class="fa fa-leaf"></i> FMS</div>
-            <div class="flex justify-end p-3">
-                <a href="#home" class="p-2 ">Home</a>
+            <div class="flex justify-around p-3 w-1/3 text-gray-400">
+                <a href="#home" class="p-2">Home</a>
                 <a href="#about" class="p-2 ">About us</a>
                 <a href="#contact" class="p-2 mr-4 ">Contact Us</a>
                 @if (Route::has('login'))
@@ -36,7 +36,7 @@
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-red-900 underline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm bg-green-500 mt-1 p-2 pl-8 pr-8 h-full ">Log in</a>
+                        <a href="{{ route('login') }}" class="text-sm bg-green-500 mt-1 p-2 pl-8 pr-8 h-full hover:bg-green-700 ">Log in</a>
                     @endauth
                 </div>
             @endif
@@ -47,7 +47,7 @@
     <!--HOME PAGE -->
     <div id="home"class="h-screen w-full flex flex-col justify-center items-center text-center">
         <h1 class="text-8xl text-white">Best Farming Management System<br>Web Application</h1>
-        <a href="#about" class="m-8 p-3 bg-green-500 text-white rounded-md text-2xl">Check us out!</a>
+        <a href="#about" class="m-8 p-3 bg-green-500 text-white rounded-md text-2xl hover:bg-green-700">Check us out!</a>
     </div>
 
     <!--DIVIDER -->
