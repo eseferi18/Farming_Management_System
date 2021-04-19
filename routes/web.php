@@ -20,3 +20,23 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('home');
 })->name('home');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/crops', function () {
+    return view('crops');
+})->name('crops');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/livestock', function () {
+    return view('livestock');
+})->name('livestock');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/inventory', function () {
+    return view('inventory');
+})->name('inventory');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/market', function () {
+    return view('market');
+})->name('market');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/weather_api', function () {
+    return view('weather_api');
+})->name('weather_api');

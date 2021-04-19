@@ -16,6 +16,31 @@
                         {{ __('Home') }}
                     </x-jet-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('crops') }}" :active="request()->routeIs('crops')">
+                        {{ __('Crops') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('livestock') }}" :active="request()->routeIs('livestock')">
+                        {{ __('Livestock') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('market') }}" :active="request()->routeIs('market')">
+                        {{ __('Market') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('inventory') }}" :active="request()->routeIs('inventory')">
+                        {{ __('Inventory') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('weather_api') }}" :active="request()->routeIs('weather_api')">
+                        {{ __('Weather API') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -34,6 +59,7 @@
                                     </button>
                                 </span>
                             </x-slot>
+                            
 
                             <x-slot name="content">
                                 <div class="w-60">
@@ -65,10 +91,10 @@
                                     @endforeach
                                 </div>
                             </x-slot>
+                            
                         </x-jet-dropdown>
                     </div>
                 @endif
-
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
                     <x-jet-dropdown align="right" width="48">
@@ -122,7 +148,7 @@
                     </x-jet-dropdown>
                 </div>
             </div>
-
+            
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
