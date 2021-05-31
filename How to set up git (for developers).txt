@@ -3,6 +3,6 @@
 3) git remote add upstream https://github.com/eseferi18/Farming_Management_System.git (this will setup the remote repository, every time you address with the name "upstream" you actually are addressing online repository)
 4) git pull upstream main (this will download the main branch of our repository in your local computer 	NOTE: AN ERROR MIGHT OCCUR OR YOU MIGHT BE PROMPTED TO SIGN INTO GITHUB. FOR ADDITIONAL INFO OR PROBLEMS FEEL FREE TO CONTACT ME)
 5) here you may change anything from our repository and use "git add ." to add all files so git can track them and "git commit -a -m "write a message"" to commit changes (if not commited changes will not apply)
-6) git push upstream master (to send all the data you added from your local computer to the online repository. this will create a pull request that expects validation. you can validate the pull request in GitHub)
+6) git push upstream main (to send all the data you added from your local computer to the online repository. this will create a pull request that expects validation. you can validate the pull request in GitHub)
 7) git fetch upstream endri-code (to get all the data from the endri-code branch. if you run "git branch -v" you will see the branch endri-code)
 8) git switch endri-code (to switch in the branch and change things there "git switch main" to go back to main branch)
