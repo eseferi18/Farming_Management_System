@@ -1,9 +1,12 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Weather API') }}
+    <div class="w-5/6 mx-auto mt-4 mb-4 text-center pt-2 pb-2 bg-gray-100 border border-green-500 rounded-xl shadow-lg">
+        <h2 class="font-bold text-3xl text-gray-800">
+            <i class="fa fa-sun"></i>
+            {{ __('Weather') }}
         </h2>
-    </x-slot>
+    </div>
     
     
 </x-app-layout>
