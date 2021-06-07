@@ -10,7 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/landing_page.css') }}"  type="text/css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 
         <!-- Styles -->
         <style>
@@ -26,8 +27,8 @@
     <body>
         <div class="fixed top-0 left-0 flex justify-center w-full">
         <nav class="w-5/6 flex justify-between text-white bg-black bg-opacity-30 mt-1">
-           <div class="p-3 text-4xl"><i class="fa fa-leaf"></i> FMS</div>
-            <div class="flex justify-around p-3 w-1/3 text-gray-400">
+           <div class="p-3 text-5xl"><i class="fa fa-leaf"></i> FMS</div>
+            <div class="flex justify-around p-3 w-1/3 text-gray-400 text-xs">
                 <a href="#home" class="p-2">Home</a>
                 <a href="#about" class="p-2 ">About us</a>
                 <a href="#contact" class="p-2 mr-4 ">Contact Us</a>
@@ -136,9 +137,9 @@
        <h2 class="text-5xl m-10">GET IN TOUCH WITH US!</h2>
        <div class="container flex justify-around mt-10 mb-10">
            <div class="firs-cont h-64 flex flex-col justify-between">
-               <h2>Phone:</h2>
-               <h2>Mail:</h2>
-               <h2>Location:</h2>
+              <h2> <i class="fa fa-phone"></i>Phone: <span class="font-bold underline">+355xxxxxxxx</span></h2>
+               <h2> <i class="fa fa-envelope"></i> Mail: <span class="font-bold underline">fms@gmail.com</span></h2>
+               <h2>  <i class="fa fa-map-marker"></i>Location: <span class="font-bold underline">Epoka University</span></h2>
            </div>
            
            <div class="sec-cont">

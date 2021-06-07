@@ -1,50 +1,50 @@
 
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="w-full mx-auto px-2  bg-green-400">
-        <div class="flex justify-between h-14">
-            <div class="flex">
+    <div class="fixed w-14 h-full pt-3 pb-3 bg-gray-800 flex justify-center items-center">
+        <div class="flex flex-col justify-between h-full">
+            <div class="flex flex-col">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex justify-center items-center mb-32">
                     <a href="{{ route('home') }}">
-                        <i class="fa fa-leaf text-3xl font-bold">FMS</i>
+                        <i class="fa fa-leaf text-2xl font-bold text-green-400" title="FMS"></i>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center mb-2">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
-                        {{ __('Home') }}
+                        <i class="fa fa-home text-2xl font-bold text-green-400" title="Home"></i>
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center  mb-2">
                     <x-jet-nav-link href="{{ route('crops') }}" :active="request()->routeIs('crops')">
-                        {{ __('Crops') }}
+                        <i class="fa fa-pagelines text-2xl font-bold text-green-400" title="Crops"></i>
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center  mb-2">
                     <x-jet-nav-link href="{{ route('livestock') }}" :active="request()->routeIs('livestock')">
-                        {{ __('Livestock') }}
+                        <i class="fa fa-paw text-2xl font-bold text-green-400" title="Livestock"></i>
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center  mb-2">
                     <x-jet-nav-link href="{{ route('market') }}" :active="request()->routeIs('market')">
-                        {{ __('Market') }}
+                        <i class="fa fa-archive text-2xl font-bold text-green-400" title="Inventory"></i>
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center  mb-2">
                     <x-jet-nav-link href="{{ route('inventory') }}" :active="request()->routeIs('inventory')">
-                        {{ __('Inventory') }}
+                        <i class="fa fa-shopping-cart text-2xl font-bold text-green-400" title="Market"></i>
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="flex justify-center items-center  mb-2">
                     <x-jet-nav-link href="{{ route('weather_api') }}" :active="request()->routeIs('weather_api')">
-                        {{ __('Weather API') }}
+                        <i class="fa fa-sun text-2xl font-bold text-green-400" title="Weather"></i>
                     </x-jet-nav-link>
                 </div>
             </div>
 
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="flex items-center">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ml-3 relative">
@@ -96,45 +96,22 @@
                     </div>
                 @endif
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
-                    <x-jet-dropdown align="right" width="48">
+                <div class="flex justify-center items-center">
+                    <x-jet-dropdown align="top" width="32">
                         <x-slot name="trigger">
-                            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                </button>
-                            @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                                        {{ Auth::user()->name }}
-
-                                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-xs rounded-md text-gray-500  hover:text-gray-700 focus:outline-none transition">
+                                        <i class="fa fa-user text-2xl font-bold text-green-400" title="Profile"></i>
                                     </button>
                                 </span>
-                            @endif
                         </x-slot>
 
                         <x-slot name="content">
-                            <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
-                            </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            <x-jet-dropdown-link  href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
-                                </x-jet-dropdown-link>
-                            @endif
-
-                            <div class="border-t border-gray-100"></div>
-
-                            <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
@@ -144,6 +121,7 @@
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
+                            
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
