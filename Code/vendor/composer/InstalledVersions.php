@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '037c2a68777448af616ddc2b02b6eadec15af8a9',
+    'reference' => '8ca4dca824ca7bd7c6155dccd67ccae0cd9fa5f9',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -42,6 +42,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
+    ),
+    'bacon/bacon-qr-code' => 
+    array (
+      'pretty_version' => '2.0.3',
+      'version' => '2.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3e9d791b67d0a2912922b7b7c7312f4b37af41e4',
     ),
     'brick/math' => 
     array (
@@ -58,6 +67,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'dasprid/enum' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5abf82f213618696dda8e3bf6f64dd042d8542b2',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -452,6 +470,15 @@ private static $installed = array (
       ),
       'reference' => '35bde0b8c49d4168545d9c4b8b28832ededc5bfb',
     ),
+    'laravel/fortify' => 
+    array (
+      'pretty_version' => 'v1.7.13',
+      'version' => '1.7.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1753d05c80f930cc2715051858900965b49f32d9',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v8.45.1',
@@ -468,7 +495,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '037c2a68777448af616ddc2b02b6eadec15af8a9',
+      'reference' => '8ca4dca824ca7bd7c6155dccd67ccae0cd9fa5f9',
     ),
     'laravel/sail' => 
     array (
@@ -589,6 +616,15 @@ private static $installed = array (
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
     ),
+    'paragonie/constant_time_encoding' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
+    ),
     'phar-io/manifest' => 
     array (
       'pretty_version' => '2.0.1',
@@ -705,6 +741,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '89ff45ea9d70e35522fb6654a2ebc221158de276',
+    ),
+    'pragmarx/google2fa' => 
+    array (
+      'pretty_version' => '8.0.0',
+      'version' => '8.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '26c4c5cf30a2844ba121760fd7301f8ad240100b',
     ),
     'psr/container' => 
     array (
