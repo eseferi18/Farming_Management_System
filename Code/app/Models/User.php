@@ -6,17 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens;
-    use HasFactory;
-    use HasProfilePhoto;
-    use Notifiable;
-    use TwoFactorAuthenticatable;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -37,8 +31,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'two_factor_recovery_codes',
-        'two_factor_secret',
     ];
 
     /**
@@ -50,12 +42,32 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // replaced by fortify actions (app/Actions/Fortify/CreateNewUser.php)
+//    public function setPasswordAttribute($password){
+//        $this->attributes['password'] = Hash::make($password);
+//    }
+
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
+
     /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
+     * check if user has a role
+     * @param string $role
+     * @return bool
      */
-    protected $appends = [
-        'profile_photo_url',
-    ];
+    public function hasAnyRole(string $role): bool
+    {
+        return null !== $this->roles()->where('name', $role)->first();
+    }
+
+    /**
+     * check if user has any given role
+     * @param array $role
+     * @return bool
+     */
+    public function hasAnyRoles(array $role): bool
+    {
+        return null !== $this->roles()->whereIn('name', $role)->first();
+    }
 }

@@ -1,1 +1,16 @@
-Code/
+Code/node_modules
+Code/public/hot
+Code/public/storage
+Code/storage/*.key
+Code/vendor
+Code/.env
+Code/.env.backup
+Code/.phpunit.result.cache
+Code/docker-compose.override.yml
+Code/Homestead.json
+Code/Homestead.yaml
+Code/npm-debug.log
+Code/yarn-error.log
+Code/.idea
+Code/.vscode
+
